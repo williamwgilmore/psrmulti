@@ -119,6 +119,7 @@ var runGame = function(){
 
 	$('.oneScore').html(oneScore);
 	$('.twoScore').html(twoScore);
+	$('.result').html(result);
 	
 	//reset -- 3 doesn't allow runGame() to execute
 	database.ref().update({
