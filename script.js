@@ -32,8 +32,12 @@ connectionsRef.on("value", function(snap) {
 	console.log(snap.numChildren());
   if (snap.numChildren() === 1){
   	playNum = '1';
+  	$('#playerNum').html('You are player one');
   } else if (snap.numChildren() === 2 && !playNum){
   	playNum = '2';
+  	$('#playerNum').html('You are player two');
+  } else if (snap.numChildren() > 2 && !playNum){
+  	$('#playerNum').html('Already two players. Sorry!');
   }
 });
 
